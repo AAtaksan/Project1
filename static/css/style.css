@@ -1,0 +1,438 @@
+/* Skill Swap Platform - Modern UI Styles (Bootstrap 5.1+ compatible)
+   Author: AI Modernization
+   Description: Clean, accessible, beautiful, and responsive styles for all major UI elements.
+*/
+
+/* THEME: Light (default) */
+:root,
+[data-theme="light"] {
+  --primary: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-dark: #3730a3;
+  --secondary: #7c3aed;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #06b6d4;
+  --light: #f9fafb;
+  --dark: #1f2937;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --gradient-1: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --gradient-2: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  --gradient-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+[data-theme="dark"] {
+  --primary: #818cf8;
+  --primary-light: #a5b4fc;
+  --primary-dark: #3730a3;
+  --secondary: #a78bfa;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --info: #38bdf8;
+  --light: #18181b;
+  --dark: #f3f4f6;
+  --text-primary: #f3f4f6;
+  --text-secondary: #a1a1aa;
+  --border: #27272a;
+  --gradient-1: linear-gradient(135deg, #6366f1 0%, #a78bfa 100%);
+  --gradient-2: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+  --gradient-bg: linear-gradient(135deg, #18181b 0%, #232336 100%);
+  --shadow: 0 4px 24px rgba(0,0,0,0.40);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--gradient-bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 70px;
+}
+
+.navbar {
+  background: var(--gradient-1);
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  border-radius: 20px;
+  margin: 0 0.25rem;
+  transition: background 0.2s;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff !important;
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  background: #fff;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.card-header {
+  background: var(--gradient-1);
+  color: #fff;
+  font-weight: 600;
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.btn {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(79,70,229,0.08);
+}
+
+.btn-primary {
+  background: var(--gradient-1);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+  color: #fff;
+}
+
+.btn-success {
+  background: var(--gradient-2);
+  color: #fff;
+  border: none;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background: linear-gradient(135deg, #22d3ee 0%, #10b981 100%);
+  color: #fff;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background: var(--primary);
+  color: #fff;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.10);
+}
+
+.modal-content {
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  background: #fff;
+  color: var(--text-primary);
+}
+
+.modal-header {
+  border-radius: 18px 18px 0 0;
+  background: var(--gradient-1);
+  color: #fff;
+}
+
+.modal-footer {
+  border-radius: 0 0 18px 18px;
+  background: #f3f4f6;
+  color: var(--text-primary);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+hr.stylish-hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  margin: 30px 0;
+}
+
+.gradient-text {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+footer, .modern-footer {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: #f9fafb;
+  padding: 3rem 0 1rem 0;
+  border-radius: 18px 18px 0 0;
+  margin-top: 4rem;
+}
+
+footer a, .modern-footer a {
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover, .modern-footer a:hover {
+  color: #fbbf24;
+}
+
+@media (max-width: 991px) {
+  .navbar-brand { font-size: 1.5rem; }
+  .card-body { padding: 1.25rem; }
+}
+
+@media (max-width: 767px) {
+  .card { margin-bottom: 1rem; }
+  .card-body { padding: 1rem; }
+  .navbar { padding: 0.5rem 0; }
+  body { padding-top: 56px; }
+}
+
+@media (max-width: 575px) {
+  .navbar-brand { font-size: 1.1rem; }
+  .card-header, .modal-header { font-size: 1rem; }
+  .card-body, .modal-body { font-size: 0.95rem; }
+} 
+
+[data-theme="dark"] .card {
+  background: #232336;
+  color: #f3f4f6;
+}
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-subtitle,
+[data-theme="dark"] .card-text,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f3f4f6 !important;
+}
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] small,
+[data-theme="dark"] .card .text-muted {
+  color: #b3b8c5 !important;
+}
+[data-theme="dark"] .bg-secondary {
+  background-color: #44465a !important;
+} 
+
+/* ROOMS TAB POLISH */
+.rooms-header, .search-box, .join-by-code {
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  background: #fff;
+  color: var(--text-primary);
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.stat-card:hover {
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.15);
+  transform: translateY(-4px) scale(1.01);
+}
+
+[data-theme="dark"] .stat-card {
+  background: #232336;
+  color: #f3f4f6;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.40);
+}
+
+.room-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.10);
+  background: #fff;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.room-card:hover {
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.13);
+  transform: translateY(-4px) scale(1.01);
+}
+[data-theme="dark"] .room-card {
+  background: #232336;
+  color: #f3f4f6;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.40);
+}
+
+.room-card .card-header {
+  background: linear-gradient(135deg, #e5e7eb 0%, #f3f4f6 100%);
+  color: #222;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.room-card .card-header h6 {
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  flex: 1 1 auto;
+  text-align: left;
+}
+.room-card .badge {
+  margin-left: 1rem;
+  align-self: center;
+}
+
+[data-theme="dark"] .room-card .card-header {
+  background: linear-gradient(135deg, #232336 0%, #18181b 100%);
+  color: #f3f4f6;
+}
+[data-theme="dark"] .room-card .card-header h6 {
+  color: #f3f4f6;
+}
+
+.room-card .card-body {
+  padding: 1.5rem;
+}
+
+.room-card .card-footer {
+  background: #f3f4f6;
+  border-top: none;
+  border-radius: 0 0 18px 18px;
+  padding: 1rem 1.5rem;
+}
+[data-theme="dark"] .room-card .card-footer {
+  background: #18181b;
+  color: #f3f4f6;
+}
+
+.room-card .badge {
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+  border-radius: 8px;
+}
+
+.room-card .text-muted, [data-theme="dark"] .room-card .text-muted {
+  color: #b3b8c5 !important;
+}
+
+.room-card .btn, .stat-card .btn {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+}
+[data-theme="dark"] .room-card .btn, [data-theme="dark"] .stat-card .btn {
+  color: #fff;
+  background: var(--gradient-1);
+  border: none;
+}
+
+.room-card .btn-outline-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+[data-theme="dark"] .room-card .btn-outline-primary {
+  border: 2px solid #a5b4fc;
+  color: #a5b4fc;
+  background: transparent;
+}
+.room-card .btn-outline-primary:hover, [data-theme="dark"] .room-card .btn-outline-primary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* General improvements for readability */
+[data-theme="dark"] .form-control, [data-theme="dark"] .input-group-text {
+  background: #232336;
+  color: #f3f4f6;
+  border: 1px solid #27272a;
+}
+[data-theme="dark"] .input-group-text {
+  background: #232336;
+  color: #a5b4fc;
+}
+[data-theme="dark"] .alert-info {
+  background: #232336;
+  color: #a5b4fc;
+  border: 1px solid #44465a;
+} 
+
+/* Stat card alignment and spacing */
+.stat-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 1.5rem 1rem;
+}
+.stat-card .card-body i {
+  margin-bottom: 0.5rem;
+}
+.stat-card .card-body h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.stat-card .card-body p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Room card grid spacing */
+.room-card {
+  margin-bottom: 2rem;
+}
+
+/* Responsive fix for room/stat cards */
+@media (max-width: 991px) {
+  .stat-card .card-body, .room-card .card-header, .room-card .card-body {
+    padding: 1.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .stat-card, .room-card {
+    margin-bottom: 1rem;
+  }
+  .stat-card .card-body, .room-card .card-header, .room-card .card-body {
+    padding: 1rem;
+  }
+} 
